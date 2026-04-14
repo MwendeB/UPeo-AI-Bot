@@ -1,0 +1,16 @@
+{
+  "app_name": "Upeo AI",
+  "version": "1.0.0",
+  "environment": "production",
+  "api": {
+    "base_url": "https://gretta-unimpressed-noncommercially.ngrok-free.dev",
+    "endpoints": {
+      "analyze": "/api/v1/analyze",
+      "analyze_batch": "/api/v1/analyze/batch",
+      "safety_check": "/safety-check",
+      "resources": "/api/v1/resources",
+      "health": "/health"
+    },
+    "timeout_ms": 10000
+  }
+}

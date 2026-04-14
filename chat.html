@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Upeo AI — check text for harmful language.">
+    <title>Upeo — Checker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page-chat upeo-chat-theme">
+    <a href="#main-content" class="upeo-skip-link">Skip to conversation</a>
+    <div class="upeo-chat-shell">
+        <aside class="upeo-chat-sidebar" aria-labelledby="upeo-sidebar-heading">
+            <h2 id="upeo-sidebar-heading" class="visually-hidden">Shortcuts</h2>
+            <a href="index.html" class="upeo-sidebar-brand" aria-label="Upeo — home">
+                <span class="upeo-brand-mark" aria-hidden="true"><i class="fas fa-shield-halved"></i></span>
+                <span>Upeo</span>
+            </a>
+            <p class="upeo-sidebar-lead">Paste text → get safe / caution / harmful + next steps.</p>
+            <ul class="upeo-sidebar-tips upeo-sidebar-tips-compact" role="list">
+                <li><i class="fas fa-microphone" aria-hidden="true"></i> Mic → Chrome / Edge</li>
+                <li><i class="fas fa-phone" aria-hidden="true"></i> Helplines in sidebar button</li>
+            </ul>
+            <button type="button" class="upeo-sidebar-helplines-btn" id="openHelplinesBtn">
+                <i class="fas fa-phone" aria-hidden="true"></i> Kenya helplines
+            </button>
+            <a href="index.html" class="upeo-sidebar-link"><i class="fas fa-arrow-left" aria-hidden="true"></i> Home</a>
+        </aside>
+
+        <main id="main-content" class="upeo-chat-main" tabindex="-1">
+            <div class="chat-container upeo-chat-panel">
+                <header class="header upeo-chat-header">
+                    <div class="upeo-chat-header-titles">
+                        <h1 class="upeo-chat-h1">Upeo</h1>
+                        <span class="upeo-chat-sub">Checker</span>
+                    </div>
+                    <span id="backendStatus" class="upeo-backend-status is-checking" role="status" aria-live="polite">
+                        <span class="upeo-status-dot" aria-hidden="true"></span>
+                        <span id="backendStatusText">Checking</span>
+                    </span>
+                    <button type="button" class="logout upeo-logout-btn" id="chatLogoutBtn" aria-label="Log out">
+                        <span class="upeo-logout-text" aria-hidden="true">Out</span><i class="fas fa-right-from-bracket" aria-hidden="true"></i>
+                    </button>
+                </header>
+
+                <div id="messages" class="upeo-messages" role="log" aria-live="polite" aria-relevant="additions" aria-label="Messages and results">
+                    <div class="message bot-msg upeo-welcome">
+                        <strong><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i> Ready</strong>
+                        <p>Type or paste below, or use the mic. Send when you’re set.</p>
+                    </div>
+                </div>
+
+                <div class="input-area upeo-input-area" role="group" aria-labelledby="input-area-label">
+                    <span id="input-area-label" class="visually-hidden">Message to check</span>
+                    <label class="visually-hidden" for="textInput">Text</label>
+                    <span id="voiceInstruction" class="visually-hidden">Speak, then send.</span>
+                    <button type="button" id="voiceBtn" class="upeo-voice-btn" aria-pressed="false" aria-describedby="voiceInstruction voiceTechHint" aria-label="Speak">
+                        <i class="fas fa-microphone" aria-hidden="true"></i>
+                    </button>
+                    <input type="text" id="textInput" placeholder="Message…" autocomplete="off" aria-describedby="voiceTechHint">
+                    <button type="button" id="sendBtn" class="upeo-send-btn" aria-label="Send">
+                        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <p id="voiceTechHint" class="upeo-voice-tech-hint">Voice: Chrome or Edge · allow mic</p>
+                <p id="voiceStatus" class="upeo-voice-status" role="status" aria-live="polite"></p>
+            </div>
+        </main>
+    </div>
+
+    <div id="helplinesModal" class="upeo-helplines-modal" role="dialog" aria-modal="true" aria-labelledby="helplinesModalTitle" aria-describedby="helplinesDisclaimer" hidden>
+        <div class="upeo-helplines-backdrop" id="helplinesBackdrop"></div>
+        <div class="upeo-helplines-panel">
+            <button type="button" class="upeo-helplines-close" id="closeHelplinesBtn" aria-label="Close">&times;</button>
+            <h2 id="helplinesModalTitle">Kenya — crisis lines</h2>
+            <p class="upeo-helplines-intro" id="helplinesDisclaimer"></p>
+            <div class="upeo-helplines-national" id="helplinesNational"></div>
+            <div class="upeo-helplines-county-block">
+                <label class="upeo-label" for="countySelect">County</label>
+                <select id="countySelect" class="upeo-county-select"></select>
+                <div id="countyDetail" class="upeo-county-detail"></div>
+            </div>
+            <div class="upeo-helplines-usiu" id="helplinesUsiuStatic"></div>
+        </div>
+    </div>
+
+    <footer class="upeo-chat-footer" role="contentinfo">
+        <p><a href="index.html#crisis-help">Helplines</a> · Not emergency care</p>
+    </footer>
+
+    <script src="helplines-data.js"></script>
+    <script type="module" src="chat-auth.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

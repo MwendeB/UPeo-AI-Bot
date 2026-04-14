@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Upeo AI — check text for harmful language and get quick next steps." />
+    <title>Upeo AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="page-landing">
+    <a href="#main-content" class="upeo-skip-link">Skip to main content</a>
+    <header class="upeo-nav" role="banner">
+        <div class="upeo-nav-inner">
+            <a href="index.html" class="upeo-brand" aria-label="Upeo AI home">
+                <span class="upeo-brand-mark" aria-hidden="true"><i class="fas fa-shield-halved"></i></span>
+                <span class="upeo-brand-text">Upeo <span class="upeo-brand-ai">AI</span></span>
+            </a>
+            <nav class="upeo-nav-links" aria-label="Page sections">
+                <a href="#how-it-works">How it works</a>
+                <a href="#for-platforms">Features</a>
+                <a href="#crisis-help">Helplines</a>
+                <a href="#trust">About</a>
+            </nav>
+            <div class="upeo-nav-actions">
+                <button type="button" id="openLoginBtn" class="upeo-btn upeo-btn-ghost">Log in</button>
+                <button type="button" id="openRegisterBtn" class="upeo-btn upeo-btn-solid">Sign up</button>
+                <button type="button" id="upeoReduceMotionBtn" class="upeo-btn upeo-btn-icon upeo-btn-ghost" aria-pressed="false" title="Less motion" aria-label="Less motion on this site">
+                    <i class="fas fa-universal-access" aria-hidden="true"></i><span class="upeo-btn-icon-label">Calm</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <p id="upeo-live-landing" class="visually-hidden" aria-live="polite" aria-atomic="true"></p>
+        <section class="upeo-hero" aria-labelledby="upeo-hero-heading">
+            <div class="upeo-hero-inner">
+                <div class="upeo-hero-copy">
+                    <p class="upeo-eyebrow"><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i> Text safety</p>
+                    <h1 id="upeo-hero-heading">Catch risky messages <span class="upeo-gradient-text">early</span></h1>
+                    <p class="upeo-lead upeo-lead-friendly">
+                        Paste or type something you’re unsure about. Get a quick read—safe, caution, or harmful—plus ideas like block, report, or reply.
+                    </p>
+                    <div class="upeo-hero-ctas">
+                        <button type="button" id="heroLoginBtn" class="upeo-btn upeo-btn-solid upeo-btn-lg">
+                            <i class="fas fa-right-to-bracket" aria-hidden="true"></i> Open checker
+                        </button>
+                        <a href="#how-it-works" class="upeo-btn upeo-btn-outline upeo-btn-lg">How it works</a>
+                    </div>
+                    <ul class="upeo-hero-bullets" role="list">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Harassment &amp; vulgarity signals</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Three levels: safe / caution / harmful</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Optional voice input in the checker</li>
+                    </ul>
+                </div>
+                <div class="upeo-hero-visual" aria-hidden="true">
+                    <div class="upeo-mockup">
+                        <div class="upeo-mockup-header">
+                            <span class="upeo-dot"></span><span class="upeo-dot"></span><span class="upeo-dot"></span>
+                            <span class="upeo-mockup-title">Upeo</span>
+                        </div>
+                        <div class="upeo-mockup-body">
+                            <div class="upeo-mock-msg user">“…not okay.”</div>
+                            <div class="upeo-mock-msg bot warn">
+                                <strong>Caution</strong>
+                                <p>Could feel targeted → report or set a boundary.</p>
+                            </div>
+                            <div class="upeo-mock-msg bot bad">
+                                <strong>Harmful</strong>
+                                <p>High risk → block, document, escalate.</p>
+                            </div>
+                        </div>
+                        <div class="upeo-mockup-input"><span>Check a message…</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="upeo-section upeo-section-alt">
+            <div class="upeo-section-inner">
+                <h2 class="upeo-section-title">How it works</h2>
+                <p class="upeo-section-sub">Three steps.</p>
+                <div class="upeo-steps">
+                    <article class="upeo-step-card upeo-interactive-card">
+                        <span class="upeo-step-num" aria-hidden="true">1</span>
+                        <i class="fas fa-keyboard" aria-hidden="true"></i>
+                        <h3>Add text</h3>
+                        <p>Paste or type. You send only what you submit.</p>
+                    </article>
+                    <article class="upeo-step-card upeo-interactive-card">
+                        <span class="upeo-step-num" aria-hidden="true">2</span>
+                        <i class="fas fa-magnifying-glass-chart" aria-hidden="true"></i>
+                        <h3>See the read</h3>
+                        <p>Safe, caution, or harmful—aligned with how platforms often think about abuse.</p>
+                    </article>
+                    <article class="upeo-step-card upeo-interactive-card">
+                        <span class="upeo-step-num" aria-hidden="true">3</span>
+                        <i class="fas fa-shield-heart" aria-hidden="true"></i>
+                        <h3>Choose a step</h3>
+                        <p>Block, mute, report, or wording ideas—your call.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="for-platforms" class="upeo-section">
+            <div class="upeo-section-inner">
+                <h2 class="upeo-section-title">What it’s for</h2>
+                <div class="upeo-feature-grid">
+                    <article class="upeo-feature upeo-interactive-card">
+                        <i class="fas fa-ban" aria-hidden="true"></i>
+                        <h3>Offensive language</h3>
+                        <p>Slurs, insults, crude content.</p>
+                    </article>
+                    <article class="upeo-feature upeo-interactive-card">
+                        <i class="fas fa-gavel" aria-hidden="true"></i>
+                        <h3>Policy-style cues</h3>
+                        <p>Similar language to moderation “flags.”</p>
+                    </article>
+                    <article class="upeo-feature upeo-interactive-card">
+                        <i class="fas fa-comments" aria-hidden="true"></i>
+                        <h3>Responses</h3>
+                        <p>Ideas to push back or disengage.</p>
+                    </article>
+                    <article class="upeo-feature upeo-interactive-card">
+                        <i class="fas fa-users" aria-hidden="true"></i>
+                        <h3>Mods &amp; you</h3>
+                        <p>Same tool for teams or personal DMs.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="crisis-help" class="upeo-section">
+            <div class="upeo-section-inner">
+                <h2 class="upeo-section-title">Kenya helplines</h2>
+                <p class="upeo-section-sub">Not a crisis service. <strong>Emergency: 999 or 112.</strong></p>
+                <div class="upeo-crisis-grid">
+                    <article class="upeo-crisis-card">
+                        <h3><i class="fas fa-phone-volume" aria-hidden="true"></i> GBV</h3>
+                        <p class="upeo-crisis-num"><a href="tel:1195">1195</a></p>
+                        <p>Toll-free · referrals</p>
+                    </article>
+                    <article class="upeo-crisis-card">
+                        <h3><i class="fas fa-shield-heart" aria-hidden="true"></i> Police</h3>
+                        <p class="upeo-crisis-num"><a href="tel:999">999</a> · <a href="tel:112">112</a></p>
+                        <p>24/7</p>
+                    </article>
+                    <article class="upeo-crisis-card">
+                        <h3><i class="fas fa-child" aria-hidden="true"></i> Childline</h3>
+                        <p class="upeo-crisis-num"><a href="tel:116">116</a></p>
+                        <p>24/7</p>
+                    </article>
+                    <article class="upeo-crisis-card upeo-crisis-card-accent">
+                        <h3><i class="fas fa-graduation-cap" aria-hidden="true"></i> USIU-Africa</h3>
+                        <p class="upeo-crisis-num"><a href="tel:+254730116282">+254 730 116 282</a>–285 <span class="upeo-crisis-hours">Mon–Fri 8–5</span></p>
+                        <p class="upeo-crisis-num"><a href="tel:+254782539361">+254 782 539 361</a> · 24/7</p>
+                        <p><a href="https://www.usiu.ac.ke/" target="_blank" rel="noopener noreferrer">usiu.ac.ke</a></p>
+                    </article>
+                </div>
+                <p class="upeo-crisis-footnote">In the checker: voice input, helplines by county (modal), USIU details in that list.</p>
+            </div>
+        </section>
+
+        <section id="trust" class="upeo-section upeo-section-alt">
+            <div class="upeo-section-inner upeo-trust">
+                <div>
+                    <h2 class="upeo-section-title">Straightforward</h2>
+                    <p class="upeo-section-sub upeo-trust-copy">
+                        No blame for what landed in your inbox. Suggestions only—not legal advice.
+                    </p>
+                </div>
+                <div class="upeo-trust-card">
+                    <p><i class="fas fa-circle-info" aria-hidden="true"></i> Check each platform’s own rules when it counts.</p>
+                    <button type="button" id="trustCtaBtn" class="upeo-btn upeo-btn-solid">Open checker</button>
+                </div>
+            </div>
+        </section>
+
+        <footer class="upeo-footer-modern" role="contentinfo" aria-label="Site footer">
+            <div class="upeo-footer-modern-inner">
+                <div class="upeo-footer-col upeo-footer-brand">
+                    <span class="upeo-footer-logo" aria-hidden="true"><i class="fas fa-shield-halved"></i></span>
+                    <span class="upeo-footer-brand-name">Upeo AI</span>
+                    <p class="upeo-footer-tagline">Text checks &amp; next steps.</p>
+                </div>
+                <div class="upeo-footer-col">
+                    <h3 class="upeo-footer-heading">Links</h3>
+                    <ul class="upeo-footer-links" role="list">
+                        <li><a href="#how-it-works">How it works</a></li>
+                        <li><a href="#for-platforms">Features</a></li>
+                        <li><a href="#crisis-help">Helplines</a></li>
+                    </ul>
+                </div>
+                <div class="upeo-footer-col">
+                    <h3 class="upeo-footer-heading">Call (Kenya)</h3>
+                    <ul class="upeo-footer-links upeo-footer-tel" role="list">
+                        <li><a href="tel:1195">1195</a></li>
+                        <li><a href="tel:999">999 / 112</a></li>
+                        <li><a href="tel:116">116</a></li>
+                    </ul>
+                </div>
+                <div class="upeo-footer-col">
+                    <h3 class="upeo-footer-heading">Account</h3>
+                    <ul class="upeo-footer-links" role="list">
+                        <li><button type="button" class="upeo-footer-link-btn" id="footerLoginBtn">Log in</button></li>
+                        <li><button type="button" class="upeo-footer-link-btn" id="footerRegisterBtn">Sign up</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="upeo-footer-bottom">
+                <p class="upeo-footer-copy">© <span id="upeo-year"></span> Upeo AI</p>
+                <p class="upeo-footer-legal">Not emergency care. <a href="tel:999">999</a> · <a href="tel:112">112</a></p>
+            </div>
+        </footer>
+    </main>
+
+    <div id="loginModal" class="modal upeo-auth-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalSubtitle">
+        <div class="modal-content upeo-auth-panel">
+            <button type="button" id="closeLogin" class="close upeo-auth-close" aria-label="Close">&times;</button>
+            <div class="upeo-auth-brand"><i class="fas fa-shield-halved" aria-hidden="true"></i></div>
+            <h2 id="modalTitle">Welcome back</h2>
+            <p id="modalSubtitle" class="upeo-auth-subtitle">Sign in to open the checker.</p>
+            <form id="authForm">
+                <label class="upeo-label" for="email">Email</label>
+                <input type="email" id="email" placeholder="you@example.com" autocomplete="email" required />
+                <label class="upeo-label" for="password">Password</label>
+                <input type="password" id="password" placeholder="••••••••" autocomplete="current-password" required />
+                <button type="submit" id="authBtn" class="btn primary w-100 mt-2 upeo-auth-submit">Log in</button>
+            </form>
+            <button type="button" id="googleBtn" class="btn secondary w-100 mt-2 upeo-google-btn">
+                <i class="fab fa-google" aria-hidden="true"></i> Google
+            </button>
+            <p id="toggleLink" class="text-center mt-2 upeo-toggle">
+                <span id="togglePrefix">New?</span>
+                <a href="#" id="switchMode">Sign up</a>
+            </p>
+            <p id="authStatus" class="text-center mt-2 upeo-auth-status" role="status"></p>
+        </div>
+    </div>
+
+    <script type="module" src="login.js" defer></script>
+    <script type="module" src="landing-buttons.js" defer></script>
+</body>
+
+</html>

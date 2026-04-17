@@ -8,13 +8,13 @@ import {
 
 const firebaseConfig = {
   apiKey: "AIzaSyABY4_PpsBFULAKGh012QRUhaWBqBVhfJo",
-  authDomain: "upeo-ai.firebaseapp.com",
-  databaseURL: "https://upeo-ai-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "upeo-ai",
-  storageBucket: "upeo-ai.firebasestorage.app",
+  authDomain: "smart-beauty-platform.firebaseapp.com",
+  databaseURL: "https://smart-beauty-platform-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "smart-beauty-platform",
+  storageBucket: "smart-beauty-platform.firebasestorage.app",
   messagingSenderId: "875835334083",
   appId: "1:875835334083:web:84c75a3dc79da673303176",
-  measurementId: "G-CCKMQ2VMHL",
+  measurementId: "G-CCKMQ2VMHL"
 };
 
 const app = initializeApp(firebaseConfig);

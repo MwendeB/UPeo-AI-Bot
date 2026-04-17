@@ -6,7 +6,6 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyABY4_PpsBFULAKGh012QRUhaWBqBVhfJo",
   authDomain: "smart-beauty-platform.firebaseapp.com",
   databaseURL: "https://smart-beauty-platform-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "smart-beauty-platform",
